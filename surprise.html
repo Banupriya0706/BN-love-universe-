@@ -1,0 +1,44 @@
+<!-- surprise.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise 💫</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function showSurprise() {
+      const surprise = document.getElementById('surpriseBox');
+      surprise.classList.add('reveal');
+      document.getElementById('revealBtn').style.display = 'none';
+    }
+  </script>
+  <style>
+    #surpriseBox {
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+      font-size: 1.5rem;
+      color: #ff69b4;
+      margin-top: 20px;
+      text-align: center;
+    }
+    #surpriseBox.reveal {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="surprise-page">
+  <div class="nav">
+    <a href="love-letter.html">Love Letter</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="dreams.html">Dreams</a>
+    <a href="photos.html">Photos</a>
+    <a href="video.html">Video</a>
+  </div>  <div class="content">
+    <h1>🎁 Special Surprise 🎁</h1>
+    <button id="revealBtn" onclick="showSurprise()">Click to Reveal</button>
+    <div id="surpriseBox">
+      "Even after all this, I still feel butterflies when I think of you 💞.<br>
+      You are not just my love... <strong>YOU ARE WRITTEN FOR ME BY THE UNIVERSE</strong> ✨"
+    </div>
+  </div>
+</body>
+</html>￼Enter
