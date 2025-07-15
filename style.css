@@ -1,0 +1,159 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', cursive;
+  background-color: #fff0f5;
+  color: #333;
+}
+
+.nav {
+  background: linear-gradient(to right, #ffb6c1, #ffa6c9);
+  padding: 10px;
+  text-align: center;
+}
+
+.nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  color: #ff1493;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Envelope boom effect */
+.love-page .content {
+  position: relative;
+  animation: slideUpFade 2s ease-in-out forwards;
+}
+
+@keyframes slideUpFade {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Gallery Styles */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.photo-img {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Video Player */
+.video-player {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 20px;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+}
+
+/* Timeline quiz */
+.question {
+  background-color: #ffe6f0;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  max-width: 600px;
+  font-size: 18px;
+  box-shadow: 0 0 10px #f9c6d1;
+}
+
+.option-btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #ff69b4;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.option-btn:hover {
+  background: #ff1493;
+}
+
+.alert {
+  background: red;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+/* Surprise box */
+#surpriseBox {
+  background: #fff3f9;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ffc0cb;
+  font-size: 20px;
+}
+
+/* Password box */
+.password-container {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.password-container input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ff69b4;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.password-container button {
+  background-color: #ff1493;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.password-container button:hover {
+  background-color: #ff69b4;
+}
