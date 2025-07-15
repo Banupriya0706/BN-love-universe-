@@ -1,0 +1,186 @@
+<!-- timeline.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline Game</title>
+  <link rel="stylesheet" href="style.css">
+  <audio id="wrongSound" src="alert.mp3"></audio>
+  <audio id="ghostSound" src="ghost.mp3"></audio>
+  <script>
+    let currentStep = 0;
+    const questions = [
+      {
+        q: "When is my first period happened?",
+        options: ["May", "March", "January"],
+        answer: 0,
+        memory: "January 2023 - First time I saw you. First pakra apo enaku ena thonuchuna ..yaru Ivan namakaga ivlo panranu thonuchu...en neraveradha assassin game aasaiya ne dha neravethuna..enakaga panni kudutha."
+      },
+      {
+        q: "Which is my favourite food darling?",
+        options: ["biriyani", "chicken rice", "I love all the food"],
+        answer: 2,
+        memory: "September 27, 2023 - First message. First message lam formal ah dha irundhuchu..but adhukaprum poga poga enaku una care panikanum thonuchu..neraiya care panikita..apovey una pathi romba kavala patruka..na unkita pesa arambichadhula irundhu I wanted you to be happy."
+      },
+      {
+        q: "Whom I like the most?",
+        options: ["my husband", "family", "friends"],
+        answer: 0,
+        memory: "October 31, 2024 - Enaku ne love ah sonna dayy....best day ever....enaku inum nyabagam iruku."
+<!-- timeline.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline Game</title>
+  <link rel="stylesheet" href="style.css">
+  <audio id="wrongSound" src="alert.mp3"></audio>
+  <audio id="ghostSound" src="ghost.mp3"></audio>
+  <script>
+    let currentStep = 0;
+    const questions = [
+      {
+        q: "When is my first period happened?",
+        options: ["May", "March", "January"],
+        answer: 0,
+        memory: "January 2023 - First time I saw you. First pakra apo enaku ena thonuchuna ..yaru Ivan namakaga ivlo panranu thonuchu...en neraveradha assassin game aasaiya ne dha neravethuna..enakaga panni kudutha."
+      },
+      {
+        q: "Which is my favourite food darling?",
+        options: ["biriyani", "chicken rice", "I love all the food"],
+        answer: 2,
+        memory: "September 27, 2023 - First message. First message lam formal ah dha irundhuchu..but adhukaprum poga poga enaku una care panikanum thonuchu..neraiya care panikita..apovey una pathi romba kavala patruka..na unkita pesa arambichadhula irundhu I wanted you to be happy."
+      },
+      {
+        q: "Whom I like the most?",
+        options: ["my husband", "family", "friends"],
+        answer: 0,
+        memory: "October 31, 2024 - Enaku ne love ah sonna dayy....best day ever....enaku inum nyabagam iruku."
+      },
+      {
+        q: "Who is my favourite god?",
+        options: ["murugar", "vinayagar", "mahadev"],
+        answer: 2,
+        memory: "November 1, 2024 - It's our love anniversary.. na romba happy ah irundha days November and October.. enaku nambika irundhuchu wife kaga sethu poranu sona person and yarukitayum pesadha person ena love pana."
+      },
+      {
+        q: "Which word I use the most during conversation?",
+        options: ["eruma", "mama", "oii"],
+        answer: 1,
+        memory: "November 9, 2024 - First time theatre with you.. unaku pudicha heroine oda movie ku ponom.. amaran.. happy ah irundhuchu.. first time anaiku dha na un kaiya pudicha road la nadandha."
+      },
+      {
+        q: "Which is my favourite hobby?",
+        options: ["singing", "dancing", "cooking"],
+        answer: 0,
+        memory: "November 9, 2024 - First kiss.. First kiss na dha panna.. unnoda left side kannathula.. romba happy ah irundhuchu.."
+      },
+      {
+        q: "Do I prefer short hair or long hair or medium hair?",
+        options: ["long", "short", "medium"],
+        answer: 0,
+        memory: "November 29, 2024 - First hug pannom unga veetla.. semma happy enaku .. una epavum hug panitey irukanum mama."
+      }
+    ];function showQuestion() {
+  const q = questions[currentStep];
+  document.getElementById("question").innerText = q.q;
+  document.getElementById("options").innerHTML = "";
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement("button");
+    btn.innerText = opt;
+    btn.onclick = () => checkAnswer(i);
+    document.getElementById("options").appendChild(btn);
+  });
+}
+
+function checkAnswer(i) {
+  const q = questions[currentStep];
+  if (i === q.answer) {
+    const msg = document.createElement("p");
+    msg.className = "memory";
+    msg.innerText = q.memory;
+    document.getElementById("timeline-output").appendChild(msg);
+    currentStep++;
+    if (currentStep < questions.length) {
+      showQuestion();
+    } else {
+      document.getElementById("question-section").innerHTML = "<h2>All memories unlocked! 🥹❤️</h2>";
+    }
+  } else {
+    document.getElementById("wrongSound").play();
+    document.getElementById("ghostSound").play();
+    document.body.classList.add("ghost-mode");
+    setTimeout(() => document.body.classList.remove("ghost-mode"), 2000);
+  }
+}
+
+window.onload = showQuestion;
+
+  </script>
+</head>
+<body class="timeline-body">
+  <div class="nav">
+    <a href="love-letter.html">Love Letter</a>
+    <a href="dreams.html">Dreams</a>
+    <a href="photos.html">Photos</a>
+    <a href="video.html">Video</a>
+    <a href="surprise.html">Surprise</a>
+  </div>
+  <div class="timeline-container">
+    <div id="question-section">
+      <h2 id="question"></h2>
+      <div id="options"></div>
+    </div>
+    <div id="timeline-output"></div>
+  </div>
+</body>
+</html>￼Enter      },
+      {
+        q: "Who is my favourite god?",
+        options: ["murugar", "vinayagar", "mahadev"],
+        answer: 2,
+        memory: "November 1, 2024 - It's our love anniversary.. na romba happy ah irundha days November and October.. enaku nambika irundhuchu wife kaga sethu poranu sona person and yarukitayum pesadha person ena love pana."
+      },
+      {
+        q: "Which word I use the most during conversation?",
+        options: ["eruma", "mama", "oii"],
+        answer: 1,
+        memory: "November 9, 2024 - First time theatre with you.. unaku pudicha heroine oda movie ku ponom.. amaran.. happy ah irundhuchu.. first time anaiku dha na un kaiya pudicha road la nadandha."
+      },
+      {
+        q: "Which is my favourite hobby?",
+        options: ["singing", "dancing", "cooking"],
+        answer: 0,
+        memory: "November 9, 2024 - First kiss.. First kiss na dha panna.. unnoda left side kannathula.. romba happy ah irundhuchu.."
+      },
+      {
+        q: "Do I prefer short hair or long hair or medium hair?",
+        options: ["long", "short", "medium"],
+        answer: 0,
+        memory: "November 29, 2024 - First hug pannom unga veetla.. semma happy enaku .. una epavum hug panitey irukanum mama."
+      }
+    ];function showQuestion() {
+t q = questions[currentStep];
+  document.getElementById("question").innerText = q.q;
+  document.getElementById("options").innerHTML = "";
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement("button");
+    btn.innerText = opt;
+    btn.onclick = () => checkAnswer(i);
+    document.getElementById("options").appendChild(btn);
+  });
+}
+
+function checkAnswer(i) {
+  const q = questions[currentStep];
+  if (i === q.answer) {
+    const msg = document.createElement("p");
+    msg.className = "memory";
+    msg.innerText = q.memory;
+    document.getElementById("timeline-output").appendChild(msg);
+    currentStep++;
+    if (currentStep < questions.length) {
+      showQuestion();
+    } else {
+      document.getElementById("question-section").innerHTML = "<h2>All memories unlocked! 🥹❤️</h2>";
+    }
+  } else {
+    document.getElementById("wrongSound").play();
