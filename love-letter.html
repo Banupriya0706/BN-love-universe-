@@ -1,47 +1,109 @@
-<!-- love-letter.html --><!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Love Letter</title>
-  <link rel="stylesheet" href="style.css">
-  <audio id="boomSound" src="boom.mp3"></audio>
-  <script>
-    window.onload = () => {
-      setTimeout(() => {
-        document.querySelector('.envelope').classList.add('open');
-        document.getElementById('boomSound').play();
-      }, 2000);
-    };
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Letter for Niranjan 💌</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffdee9, #b5fffc);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .envelope-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .envelope {
+      width: 200px;
+      height: 150px;
+      background: url('https://i.imgur.com/N1aJfXR.png') no-repeat center/cover;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
+
+    .envelope:hover {
+      transform: scale(1.05);
+    }
+
+    .message {
+      display: none;
+      max-width: 600px;
+      background: #ffffffdd;
+      margin-top: 20px;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255,105,180, 0.6);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      text-align: center;
+      color: #e91e63;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #333;
+      white-space: pre-line;
+    }
+  </style>
 </head>
-<body class="love-page">
-  <div class="nav">
-    <a href="timeline.html">Timeline</a>
-    <a href="dreams.html">Dreams</a>
-    <a href="photos.html">Photos</a>
-    <a href="video.html">Video</a>
-    <a href="surprise.html">Surprise</a>
-  </div>
-  <div class="envelope">
-    <div class="letter">
+<body>
+  <div class="envelope-container">
+    <div class="envelope" id="envelope" title="Click to open the letter"></div>
+    <div class="message" id="message">
       <h1>En Uyirukku Uyiraana Niranjan-ku 💌</h1>
       <p>
-        Hey mama..my lovely lovellyyyyyyyyyyyy husband, you mean the world to me.<br>
-        Mama enaku una romba pudikum mama. Una patha aprum death nenachu romba bayapadra..<br>
-        Enaku neeyum saga kudadhu, nanum saga kudadhu.. namba vazhanum sagama.. ovvoru nodiyum una rasichuitey vazhanum mama.<br>
-        Enaku indha ulagathulaye una dha romba pudikum mama. Ne dha enaku ellamey mama.<br>
-        En ladduuuuukuttyyyyyyyyyy ..en chellaaaa purushannnnn... unna katti pudichikanum mama..<br>
-        Una na apdi pathukanum nenaikura. Unaku kedaikadha sandhosham ellamey na unaku kudukanum.<br>
-        Mama ne enaku romba special.. un love ku konja kuda na thangudhi anavaley ila 🥺..<br>
-        You deserve to be loved mama.. una madhiri oru husband kedaika na kuduthu vechirukanum..<br>
-        Thanks for coming into my life.. na una kandipa pathukura.<br>
-        Enaku anubavicha kashtatha unaku kuduka mata kandipa.. una azha vekama pathukanum nenaikura ana azha vekra..<br>
-        Na kandipa azha vekkama pathukura mama..<br>
-        Mama unaku ena pudichalum pudikalanalum na unaiye dha mama nenachitu kadhalichitu irupa..<br>
-        Na sagra varaikum mrs.niranjan ah dha irukanum aasai padra. Pls sagardhu pathi enaikumey pesadha. Plsssssss namakaga vazhu..<br>
-        I neeeddds youuuuu.. varthaiku kuda sagra soladha. I love you mama ❤️
+Hey mama..my lovely lovellyyyyyyyyyyyy husband, you mean the world to me.
+Mama enaku una romba pudikum mama. Una patha aprum death nenachu romba bayapadra..
+Enaku neeyum saga kudadhu, nanum saga kudadhu.. namba vazhanum sagama.. ovvoru nodiyum una rasichuitey vazhanum mama.
+Enaku indha ulagathulaye una dha romba pudikum mama. Ne dha enaku ellamey mama.
+En ladduuuuukuttyyyyyyyyyy ..en chellaaaa purushannnnn... unna katti pudichikanum mama..
+Una na apdi pathukanum nenaikura. Unaku kedaikadha sandhosham ellamey na unaku kudukanum.
+Mama ne enaku romba special.. un love ku konja kuda na thangudhi anavaley ila 🥺..
+You deserve to be loved mama.. una madhiri oru husband kedaika na kuduthu vechirukanum..
+Thanks for coming into my life.. na una kandipa pathukura.
+Enaku anubavicha kashtatha unaku kuduka mata kandipa.. una azha vekama pathukanum nenaikura ana azha vekra..
+Na kandipa azha vekkama pathukura mama..
+Mama unaku ena pudichalum pudikalanalum na unaiye dha mama nenachitu kadhalichitu irupa..
+Na sagra varaikum mrs.niranjan ah dha irukanum aasai padra. Pls sagardhu pathi enaikumey pesadha. Plsssssss namakaga vazhu..
+I neeeddds youuuuu.. varthaiku kuda sagra soladha. I love you mama ❤️
       </p>
     </div>
   </div>
+
+  <!-- Sound -->
+  <audio id="boomSound" src="https://www.soundjay.com/button/sounds/button-16.mp3" preload="auto"></audio>
+  <audio id="bgMusic" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" preload="auto" loop></audio>
+
+  <script>
+    const envelope = document.getElementById("envelope");
+    const message = document.getElementById("message");
+    const boomSound = document.getElementById("boomSound");
+    const bgMusic = document.getElementById("bgMusic");
+
+    envelope.addEventListener("click", () => {
+      envelope.style.display = "none";
+      boomSound.play();
+      bgMusic.volume = 0.3;
+      bgMusic.play();
+      message.style.display = "block";
+    });
+  </script>
 </body>
-</html>￼Enter
+</html>
